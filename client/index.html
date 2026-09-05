@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Escape the Friend Group</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🏃 ESCAPE THE FRIEND GROUP 🏃</h1>
+
+    <!-- ========================= -->
+    <!-- LOBBY SCREEN -->
+    <!-- ========================= -->
+
+    <div id="lobby">
+
+        <label>
+            Server address
+            <input id="serverUrl" type="text" placeholder="wss://your-server.onrender.com">
+        </label>
+
+        <label>
+            Room code
+            <input id="roomCode" type="text" maxlength="8" placeholder="e.g. FOX42">
+        </label>
+
+        <div class="lobby-buttons">
+            <button id="createBtn">Create Room</button>
+            <button id="joinBtn">Join Room</button>
+        </div>
+
+        <p id="lobbyStatus" class="lobby-status"></p>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- GAME SCREEN -->
+    <!-- ========================= -->
+
+    <div id="gameScreen" class="hidden">
+
+        <div class="info">
+            <p>Score: <span id="score">0</span></p>
+            <p id="roleLabel"></p>
+        </div>
+
+        <div class="game-container">
+            <canvas id="gameCanvas" width="950" height="650"></canvas>
+        </div>
+
+        <div class="touch-controls">
+            <div class="touch-row">
+                <button class="touch-btn" id="btnUp">⬆️</button>
+            </div>
+            <div class="touch-row">
+                <button class="touch-btn" id="btnLeft">⬅️</button>
+                <button class="touch-btn" id="btnDown">⬇️</button>
+                <button class="touch-btn" id="btnRight">➡️</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="gameOver" class="hidden">
+        <h2>💀 GAME OVER 💀</h2>
+        <p id="gameOverText">Caught!</p>
+        <button id="restartBtn">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

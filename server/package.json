@@ -1,0 +1,15 @@
+{
+  "name": "escape-the-friend-group-server",
+  "version": "1.0.0",
+  "description": "Authoritative multiplayer relay server for Escape the Friend Group (1 runner vs 1 chaser).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
